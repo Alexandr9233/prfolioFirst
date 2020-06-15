@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@import "./variables.scss";
+
+$main-color: #39b4af;
+
+@mixin forLi {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 700;
+    margin-left: 15px;
+    list-style-type: none;
+}
+
+@mixin forA {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        color: $main-color;
+    }
+}
+
+html {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+
+    h1 {
+        padding: 0;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: #e9e9e9;
+    height: 25vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        flex-basis: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        flex-basis: 80%;
+
+        ul {
+            margin: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 100%;
+        }
+
+        & ul li {
+            @include forLi;
+
+            a {
+                @include forA;
+
+                &:hover {
+                    color: $main-color;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+.logo img {
+    height: 20vh;
+    cursor: pointer;
+}
+
+.info-block > h1 > span {
+    margin: 10vh;
+    text-align: center;
+}
+
+.info-block {
+    display: flex;
+    justify-content: center;
+}
+
+.bar {
+    position: relative;
+}
+
+#gamburger {
+    position: absolute;
+    display: none;
+    width: 100%;
+    margin: 0;
+
+    &:focus {
+        transition: 1.5s;
+    }
+}
+
+.for-mobile {
+    display: none;
+}
+
+
+.bar > .q {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+
+    ul > li {
+        @include forLi;
+
+        display: flex;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3vh;
+
+        & > a {
+            @include forA;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .bar > #gamburger {
+        display: block;
+    }
+
+    .main > .menu {
+        display: none;
+    }
+
+    .main {
+        justify-content: center;
+    }
+}
