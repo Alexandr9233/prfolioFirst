@@ -1,82 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
-      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <script defer src="./js/fontawesome.min.js"></script>
-    <title>Document</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="wrapper">
-        <div class="main">
-          <div class="logo">
-            <a data-fancybox="gallery" href="image/avatar.jpeg"
-              ><img src="image/avatar.jpeg" alt=""
-            /></a>
-          </div>
-          <div class="menu">
-            <ul>
-              <li><a href="#header">home</a></li>
-              <li><a href="">about</a></li>
-              <li><a href="">work</a></li>
-              <li><a href="">courses</a></li>
-              <li><a href="">contact</a></li>
-            </ul>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="./js/fontawesome.min.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="wrapper">
+      <div class="main">
+        <div class="logo">
+          <a data-fancybox="gallery" href="image/avatar.jpeg"><img src="image/avatar.jpeg" alt="" /></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#header">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#works">works</a></li>
+            <li><a href="">courses</a></li>
+            <li><a href="">contact</a></li>
+          </ul>
         </div>
       </div>
-    </header>
-    <div class="bar">
-      <div id="mobile-nav" class="for-mobile">
-        <ul>
-          <li><a href="#header">home</a></li>
-          <li><a href="">about</a></li>
-          <li><a href="">work</a></li>
-          <li><a href="">courses</a></li>
-          <li><a href="">contact</a></li>
-        </ul>
-      </div>
-      <button id="gamburger">
-        <i class="fas fa-bars"></i>
     </div>
-      </button>
+  </header>
+  <div class="bar">
+    <div id="mobile-nav" class="for-mobile">
+      <ul>
+        <li><a href="#header">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#works">works</a></li>
+        <li><a href="">courses</a></li>
+        <li><a href="">contact</a></li>
+      </ul>
     </div>
+    <button id="gamburger">
+      <i class="fas fa-bars"></i>
+  </div>
+  </button>
+  </div>
+  <div class="wrapper-info">
     <div class="info-block">
-      <h1><span class="about">About me</span></h1>
-      <div class="text"></div>
+      <h1><span id="about" class="about">About me</span></h1>
+      <div class="text-about">
+        <ul class="info">
+          <li>Name: Alexandr</li>
+          <li>Age: 27</li>
+          <li>Married</li>
+          <li>I from Minsk</li>
+          <li>Served in the army</li>
+        </ul>
+        <p class="about-myslef">
+          I`m was born 7 jule 1992. My hobbies are plaing on the guitar, playing poker and meet with my friends.
+          I graduated "Russian`s economic university Plehanov`s Name" in 2020. (Faculty:
+          Applied Informatics) <br>
+          Also I was intern for company "VRP Consulting" in 2018.
+          Now I`m self-taught, I learn online courses "Udemy", read documentation (main MDN) and watch the videos on
+          YouTube.
+          I want to become Front End and next Full Stack developer.
+          About myself I can say: I`m funy, friendly, the responsible person and I very like web devolopment.
+        </p>
+      </div>
       <div class="contact"></div>
     </div>
-    <script src="./js/anime.min.js"></script>
-    <script>
-        let b = anime({
-         targets: '#mobile-nav',
-         translateY: 15,
-         autoplay: false
-         
-     });
- 
-     document.querySelector('#gamburger').onclick = b.restart;
-     </script>
-    <script src="./js/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    </script>
-  </body>
+  </div>
+  <div id="works" class="my__works">
+    <div class="wrapper">
+      <!-- <h2 class="
+    heading-2">My works</h2> -->
+      <div class="mysites">
+        <div class="work site1">
+          <a href="D:/Courses/CSS/siteOne/index.html"></a>
+        </div>
+        <div class="work site2">
+          <a href="D:/Courses/CSS/siteOne/index.html"></a>
+        </div>
+        <div class="work site3">
+          <a href="D:/Courses/CSS/siteOne/index.html"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/anime.min.js"></script>
+  <script src="./js/scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  </script>
+</body>
+
 </html>

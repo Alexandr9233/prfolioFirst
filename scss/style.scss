@@ -2,25 +2,6 @@
 
 @import "./variables.scss";
 
-$main-color: #39b4af;
-
-@mixin forLi {
-    text-transform: uppercase;
-    font-size: 0.7em;
-    font-weight: 700;
-    margin-left: 15px;
-    list-style-type: none;
-}
-
-@mixin forA {
-    text-decoration: none;
-    color: black;
-
-    &:hover {
-        color: $main-color;
-    }
-}
-
 html {
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
@@ -40,12 +21,7 @@ header {
 }
 
 .wrapper {
-    display: flex;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
-    height: 100%;
+    @include wrapper;
 }
 
 .main {
@@ -80,6 +56,8 @@ header {
             a {
                 @include forA;
 
+                transition: color 0.2s;
+
                 &:hover {
                     color: $main-color;
                     padding-bottom: 15px;
@@ -90,63 +68,150 @@ header {
 }
 
 .logo img {
-    height: 20vh;
-    cursor: pointer;
+    @include forImg;
 }
 
-.info-block > h1 > span {
-    margin: 10vh;
-    text-align: center;
+.info-block > h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.about {
+    margin: 5vh;
 }
 
 .info-block {
     display: flex;
-    justify-content: center;
+    align-self: center;
 }
 
 .bar {
     position: relative;
 }
 
-#gamburger {
-    position: absolute;
-    display: none;
-    width: 100%;
-    margin: 0;
-
-    &:focus {
-        transition: 1.5s;
-    }
-}
-
 .for-mobile {
     display: none;
 }
 
+#gamburger {
+    display: none;
+    width: 100%;
+    margin: 0;
+}
 
-.bar > .q {
+.wrapper-info {
+    @include wrapper;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-about {
+    width: 50vw;
+    height: 45vh;
+    box-shadow: 0.4em 0.4em 1em 0.4em $main-color;
+    margin-bottom: 5vh;
+}
+
+.text-about {
+    overflow: auto;
+    background: rgb(163, 176, 179);
+    background: linear-gradient(141deg, rgba(163, 176, 179, 1) 33%, rgba(57, 180, 175, 1) 76%);
+}
+
+.about-myslef {
+    padding: 10px;
+}
+
+.my__works {
+    width: 100%;
+    height: 300px;
+    background-color: $color-grey;
+}
+
+.mysites {
+    width: 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     align-items: center;
+}
 
-    & > ul {
+.site1 {
+    background-image: url("/image/First.PNG");
+
+    @include forSite;
+}
+
+.site2 {
+    background-image: url("/image/First.PNG");
+
+    @include forSite;
+}
+
+.site3 {
+    background-image: url("/image/First.PNG");
+
+    @include forSite;
+}
+
+.heading-2 {
+    display: block;
+    text-align: center;
+    letter-spacing: .2px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.work {
+    transition: all .3s;
+}
+
+.work:hover {
+    transform: scale(1.2, 1.2);
+}
+
+@media (max-width: 470px) {
+    .for-mobile {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0;
-    }
-
-    ul > li {
-        @include forLi;
-
-        display: flex;
-        margin: 0;
         justify-content: center;
         align-items: center;
-        padding-bottom: 3vh;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s;
 
-        & > a {
-            @include forA;
+        &.q {
+            max-height: 200px;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    .bar {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+
+            li {
+                @include forLi;
+
+                display: flex;
+                margin: 0;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 3vh;
+
+                & > a {
+                    @include forA;
+                }
+            }
         }
     }
 }
