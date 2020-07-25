@@ -143,6 +143,15 @@ header {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 20px;
+}
+
+.work {
+    position: relative;
+
+    & > a {
+        @include forLinksInWork;
+    }
 }
 
 .site1 {
@@ -152,7 +161,7 @@ header {
 }
 
 .site2 {
-    background-image: url("/image/First.PNG");
+    background-image: url("/image/Two.PNG");
 
     @include forSite;
 }

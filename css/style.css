@@ -178,6 +178,19 @@ header {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 20px;
+}
+
+.work {
+  position: relative;
+}
+
+.work > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .site1 {
@@ -191,7 +204,7 @@ header {
 }
 
 .site2 {
-  background-image: url("/image/First.PNG");
+  background-image: url("/image/Two.PNG");
   box-shadow: 0.2em 0.2em 1em 0.2em #39b4af;
   height: 20vh;
   cursor: pointer;

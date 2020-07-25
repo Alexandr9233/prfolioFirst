@@ -58,3 +58,11 @@ $main-color: #39b4af;
     height: 150px;
     background-size: cover;
 }
+
+@mixin forLinksInWork {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
