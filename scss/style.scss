@@ -155,13 +155,13 @@ header {
 }
 
 .site1 {
-    background-image: url("/image/First.PNG");
+    background-image: url("/image/First.jpeg");
 
     @include forSite;
 }
 
 .site2 {
-    background-image: url("/image/Two.PNG");
+    background-image: url("/image/Two.jpeg");
 
     @include forSite;
 }
