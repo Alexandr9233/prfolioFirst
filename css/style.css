@@ -194,7 +194,7 @@ header {
 }
 
 .site1 {
-  background-image: url("/image/First.jpeg");
+  background-image: url("../image/First.jpeg");
   box-shadow: 0.2em 0.2em 1em 0.2em #39b4af;
   height: 20vh;
   cursor: pointer;
@@ -204,7 +204,7 @@ header {
 }
 
 .site2 {
-  background-image: url("/image/Two.jpeg");
+  background-image: url("../image/Two.jpeg");
   box-shadow: 0.2em 0.2em 1em 0.2em #39b4af;
   height: 20vh;
   cursor: pointer;
